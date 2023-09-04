@@ -54,19 +54,31 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/lodash-es": "^4.17.8",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
     "dumi": "^2.2.0",
+    "dumi-theme-antd-style": "^0.29.4",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.7",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-less": "^1.0.8"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
   }
 }

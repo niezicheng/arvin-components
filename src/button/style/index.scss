@@ -1,0 +1,118 @@
+@import '../../styles/tokens/index';
+
+.#{$prefix}-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: $shape-corner-small;
+  cursor: pointer;
+}
+
+@mixin buttonSize($size, $height, $fs, $pd, $shape) {
+  .#{$prefix}-button--#{$size} {
+    min-width: $height;
+    height: $height;
+    font-size: $fs;
+    padding: 0 $pd;
+    &.#{$prefix}-button--#{$shape} {
+      border-radius: $height / 2;
+    }
+  }
+}
+
+@mixin buttonType($type, $color: $color-text, $borderColor: $color-outlined , $bgColor: $white) {
+  .#{$prefix}-button--#{$type} {
+    color: $color;
+    border-color: $borderColor;
+    background-color: $bgColor;
+    @if $type == 'dashed' {
+      border-style: dashed;
+    }
+    @if ($type == 'link') {
+      border-style: none;
+    }
+  }
+}
+
+@mixin buttonShape($shape) {
+  .#{$prefix}-button--#{$shape} {
+    border-radius: 50%;
+    padding: 0;
+  }
+}
+
+@mixin buttonStatus($status, $bgColor, $hoverBgColor, $activeBgColor) {
+  .#{$prefix}-button--#{$status} {
+    color: $white;
+    background-color: $bgColor;
+    border-color: $bgColor;
+    &:hover {
+      color: $white;
+      background-color: $hoverBgColor;
+      border-color: $hoverBgColor;
+    }
+    &:active {
+      color: $white;
+      background-color: $activeBgColor;
+      border-color: $activeBgColor;
+    }
+  }
+}
+
+@mixin buttonDisabled($disabled, $color) {
+  .#{$prefix}-button--#{$disabled} {
+    color: $color;
+    border-color: $color;
+    cursor: not-allowed;
+
+    &:hover {
+      color: $color;
+      border-color: $color;
+    }
+    &:active {
+      color: $color;
+      border-color: $color;
+    }
+  }
+}
+
+// Size / [round shape]
+@include buttonSize(small, 24px, 12px, 8px, round);
+@include buttonSize(middle, 32px, 14px, 16px, round);
+@include buttonSize(large, 36px, 14px, 16px, round);
+
+// Type
+@include buttonType(default);
+@include buttonType('default:hover', $color-primary-hover, $color-primary-hover);
+@include buttonType('default:active', $color-primary-active, $color-primary-active);
+
+@include buttonType(primary, $white, $color-primary, $color-primary);
+@include buttonType('primary:hover', $white, $color-primary-hover, $color-primary-hover);
+@include buttonType('primary:active', $white, $color-primary-active, $color-primary-active);
+
+@include buttonType(dashed);
+@include buttonType('dashed:hover', $color-primary-hover, $color-primary-hover);
+@include buttonType('dashed:active', $color-primary-active, $color-primary-active);
+
+@include buttonType(link, $color-primary, transparent);
+@include buttonType('link:hover', $color-primary-hover, transparent);
+@include buttonType('link:active', $color-primary-active, transparent);
+
+@include buttonType(text, $color-text, transparent);
+@include buttonType('text:hover', $color-text, transparent, $color-hover);
+@include buttonType('text:active', $color-text, transparent, $color-active);
+
+// Shape
+@include buttonShape(circle);
+
+// Status
+@include buttonStatus(info, $color-info, $color-info-hover, $color-info-active);
+@include buttonStatus(success, $color-success, $color-success-hover, $color-success-active);
+@include buttonStatus(warning, $color-warning, $color-warning-hover, $color-warning-active);
+@include buttonStatus(error, $color-error, $color-error-hover, $color-error-active);
+
+// Status
+@include buttonDisabled(disabled, $color-text-disabled);

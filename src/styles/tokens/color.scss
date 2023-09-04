@@ -1,0 +1,47 @@
+@forward '../theme/index.scss';
+
+// default
+$color: var(--arvin-color);
+$color-hover: var(--arvin-color-hover);
+$color-active: var(--arvin-color-active);
+$color-suppl: var(--arvin-color-suppl);
+
+// primary
+$color-primary: var(--arvin-color-primary);
+$color-primary-hover: var(--arvin-color-primary-hover);
+$color-primary-active: var(--arvin-color-primary-active);
+$color-primary-suppl: var(--arvin-color-primary-suppl);
+
+// info
+$color-info: var(--arvin-color-info);
+$color-info-hover: var(--arvin-color-info-hover);
+$color-info-active: var(--arvin-color-info-active);
+$color-info-suppl: var(--arvin-color-info-suppl);
+
+// success
+$color-success: var(--arvin-color-success);
+$color-success-hover: var(--arvin-color-success-hover);
+$color-success-active: var(--arvin-color-success-active);
+$color-success-suppl: var(--arvin-color-success-suppl);
+
+// error
+$color-error: var(--arvin-color-error);
+$color-error-hover: var(--arvin-color-error-hover);
+$color-error-active: var(--arvin-color-error-active);
+$color-error-suppl: var(--arvin-color-error-suppl);
+
+// warning
+$color-warning: var(--arvin-color-warning);
+$color-warning-hover: var(--arvin-color-warning-hover);
+$color-warning-active: var(--arvin-color-warning-active);
+$color-warning-suppl: var(--arvin-color-warning-suppl);
+
+$color-href: var(--arvin-color-href);
+$color-text: var(--arvin-color-text);
+$color-text-secondary: var(--arvin-color-text-secondary);
+$color-text-tertiary: var(--arvin-color-text-tertiary);
+$color-text-disabled: var(--arvin-color-text-disabled);
+$color-outlined: var(--arvin-color-outlined);
+
+$white: #ffffff;
+$black: #000000;

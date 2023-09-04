@@ -1,0 +1,44 @@
+:root {
+  // default
+  --arvin-color: #222222;
+  --arvin-color-hover: rgba(46, 51, 56, .09);
+  --arvin-color-active: rgba(46, 51, 56, .13);
+  --arvin-color-suppl: rgba(46, 51, 56, .09);
+
+  // primary
+  --arvin-color-primary: #18a058;
+  --arvin-color-primary-hover: #36ad6a;
+  --arvin-color-primary-active: #0c7a43;
+  --arvin-color-primary-suppl: #36ad6a;
+
+  // info
+  --arvin-color-info: #2080f0;
+  --arvin-color-info-hover: #4098fc;
+  --arvin-color-info-active: #1060c9;
+  --arvin-color-info-suppl: #4098fc;
+
+  // success
+  --arvin-color-success: #18a058;
+  --arvin-color-success-hover: #36ad6a;
+  --arvin-color-success-active: #0c7a43;
+  --arvin-color-success-suppl: #36ad6a;
+
+  // error
+  --arvin-color-error: #d03050;
+  --arvin-color-error-hover: #de576d;
+  --arvin-color-error-active: #ab1f3f;
+  --arvin-color-error-suppl: #de576d;
+
+  // warning
+  --arvin-color-warning: #f0a020;
+  --arvin-color-warning-hover: #fcb040;
+  --arvin-color-warning-active: #c97c10;
+  --arvin-color-warning-suppl: #fcb040;
+
+  --arvin-color-href: #1890ff;
+  --arvin-color-text: rgb(30 32 37 / 100%);
+  --arvin-color-text-secondary: rgb(30 32 37 / 80%);
+  --arvin-color-text-tertiary: rgb(30 32 37 / 50%);
+  --arvin-color-text-disabled: rgb(30 32 37 / 30%);
+  --arvin-color-outlined: rgb(30 32 37 / 24%);
+}

@@ -1,0 +1,44 @@
+:root.dark {
+  // default
+  --arvin-color: #222222;
+  --arvin-color-hover: rgba(255, 255, 255, .12);
+  --arvin-color-active: rgba(255, 255, 255, .08);
+  --arvin-color-suppl: rgba(255, 255, 255, .12);
+
+  // primary
+  --arvin-color-primary: #63e2b7;
+  --arvin-color-primary-hover: #7fe7c4;
+  --arvin-color-primary-active: #5acea7;
+  --arvin-color-primary-suppl: 'rgb(42, 148, 125)';
+
+  // info
+  --arvin-color-info: #70c0e8;
+  --arvin-color-info-hover: #8acbec;
+  --arvin-color-info-active: #66afd3;
+  --arvin-color-info-suppl: 'rgb(56, 137, 197)';
+
+  // success
+  --arvin-color-success: #63e2b7;
+  --arvin-color-success-hover: #7fe7c4;
+  --arvin-color-success-active: #5acea7;
+  --arvin-color-success-suppl: 'rgb(42, 148, 125)';
+
+  // error
+  --arvin-color-error: #e88080;
+  --arvin-color-error-hover: #e98b8b;
+  --arvin-color-error-active: #e57272;
+  --arvin-color-error-suppl: 'rgb(208, 58, 82)'
+
+  // warning
+  --arvin-color-warning: #f2c97d;
+  --arvin-color-warning-hover: #f5d599;
+  --arvin-color-warning-active: #e6c260;
+  --arvin-color-warning-suppl: 'rgb(240, 138, 0)';
+
+  --arvin-color-href: #308ce1;
+  --arvin-color-text: rgb(255 255 255 / 90%);
+  --arvin-color-text-secondary: rgb(255 255 255 / 70%);
+  --arvin-color-text-tertiary: rgb(255 255 255 / 45%);
+  --arvin-color-text-disabled: rgb(255 255 255 / 26%);
+  --arvin-color-outlined: rgb(255 255 255 / 24%);
+}
