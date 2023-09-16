@@ -1,9 +1,9 @@
-
+import classNames from 'classnames';
 import React from 'react';
-import './style/index.scss'
-import { createCssScope } from '../utils'
-import { IButtonProps } from './types'
 import { EShape, ESize, EType } from '../config';
+import { createCssScope } from '../utils';
+import './style/index.scss';
+import { IButtonProps } from './types';
 
 const Button = (props: IButtonProps) => {
   const {
@@ -14,18 +14,24 @@ const Button = (props: IButtonProps) => {
     loading = true,
     disabled = false,
     children = null,
-  } = props
+    style = {},
+    className = '',
+    onClick = () => {},
+  } = props;
   const bem = createCssScope('button');
-  const classname = bem([type, shape, status, size], {
-    loading: loading,
-    disabled,
-  });
+  const classname = classNames(
+    bem([type, shape, status, size], {
+      loading: loading,
+      disabled,
+    }),
+    className,
+  );
 
   return (
-    <button type='button' className={classname}>
+    <button type="button" className={classname} style={style} onClick={onClick}>
       {children}
     </button>
-  )
+  );
 };
 
-export default Button
+export default Button;

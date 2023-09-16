@@ -97,13 +97,13 @@
 @include buttonType('dashed:hover', $color-primary-hover, $color-primary-hover);
 @include buttonType('dashed:active', $color-primary-active, $color-primary-active);
 
-@include buttonType(link, $color-primary, transparent);
-@include buttonType('link:hover', $color-primary-hover, transparent);
-@include buttonType('link:active', $color-primary-active, transparent);
+@include buttonType(link, $color-primary, transparent, transparent);
+@include buttonType('link:hover', $color-primary-hover, transparent, transparent);
+@include buttonType('link:active', $color-primary-active, transparent, transparent);
 
-@include buttonType(text, $color-text, transparent);
-@include buttonType('text:hover', $color-text, transparent, $color-hover);
-@include buttonType('text:active', $color-text, transparent, $color-active);
+@include buttonType(text, $color-text, transparent, transparent);
+@include buttonType('text:hover', $color-text, transparent, transparent);
+@include buttonType('text:active', $color-text, transparent, transparent);
 
 // Shape
 @include buttonShape(circle);

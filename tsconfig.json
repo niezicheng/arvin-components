@@ -13,5 +13,6 @@
       "@arvin/react-ui/*": ["src/*", "*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"],
+  "exclude": ["src/**/__tests__"]
 }
