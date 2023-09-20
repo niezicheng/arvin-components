@@ -63,87 +63,6 @@ exports[`<Button /> should render button with onClick 1`] = `
 </button>
 `;
 
-exports[`<Button /> should render button with shape 1`] = `
-<button
-  class="ar-button ar-button--default ar-button--circle ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  circle
-</button>
-`;
-
-exports[`<Button /> should render button with shape 2`] = `
-<button
-  class="ar-button ar-button--default ar-button--round ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  round
-</button>
-`;
-
-exports[`<Button /> should render button with size 1`] = `
-<button
-  class="ar-button ar-button--default ar-button-- ar-button--large ar-button--loading"
-  type="button"
->
-  large
-</button>
-`;
-
-exports[`<Button /> should render button with size 2`] = `
-<button
-  class="ar-button ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  middle
-</button>
-`;
-
-exports[`<Button /> should render button with size 3`] = `
-<button
-  class="ar-button ar-button--default ar-button-- ar-button--small ar-button--loading"
-  type="button"
->
-  small
-</button>
-`;
-
-exports[`<Button /> should render button with status 1`] = `
-<button
-  class="ar-button ar-button--default ar-button--success ar-button--middle ar-button--loading"
-  type="button"
->
-  success
-</button>
-`;
-
-exports[`<Button /> should render button with status 2`] = `
-<button
-  class="ar-button ar-button--default ar-button--warning ar-button--middle ar-button--loading"
-  type="button"
->
-  warning
-</button>
-`;
-
-exports[`<Button /> should render button with status 3`] = `
-<button
-  class="ar-button ar-button--default ar-button--error ar-button--middle ar-button--loading"
-  type="button"
->
-  error
-</button>
-`;
-
-exports[`<Button /> should render button with status 4`] = `
-<button
-  class="ar-button ar-button--default ar-button--info ar-button--middle ar-button--loading"
-  type="button"
->
-  info
-</button>
-`;
-
 exports[`<Button /> should render button with style 1`] = `
 <button
   class="ar-button ar-button--default ar-button-- ar-button--middle ar-button--loading"
@@ -151,51 +70,6 @@ exports[`<Button /> should render button with style 1`] = `
   type="button"
 >
   style
-</button>
-`;
-
-exports[`<Button /> should render button with type 1`] = `
-<button
-  class="ar-button ar-button--link ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  link
-</button>
-`;
-
-exports[`<Button /> should render button with type 2`] = `
-<button
-  class="ar-button ar-button--text ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  text
-</button>
-`;
-
-exports[`<Button /> should render button with type 3`] = `
-<button
-  class="ar-button ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  default
-</button>
-`;
-
-exports[`<Button /> should render button with type 4`] = `
-<button
-  class="ar-button ar-button--primary ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  primary
-</button>
-`;
-
-exports[`<Button /> should render button with type 5`] = `
-<button
-  class="ar-button ar-button--dashed ar-button--default ar-button-- ar-button--middle ar-button--loading"
-  type="button"
->
-  dashed
 </button>
 `;
 

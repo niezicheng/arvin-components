@@ -1,7 +1,8 @@
+import { Button } from '@arvin/react-ui';
 import { render } from '@testing-library/react';
 import React from 'react';
-import { TType } from '../../config';
-import Button from '../index';
+import { TSize, TStatus, TType } from '../../config';
+import { ButtonShape, ButtonSize, ButtonStatus, ButtonType } from '../demo';
 
 describe('<Button />', () => {
   test('should render default', () => {
@@ -11,63 +12,40 @@ describe('<Button />', () => {
 
   test('should render button with type', () => {
     const types: Array<TType> = [
-      'link',
-      'text',
-      'default',
       'primary',
+      'default',
       'dashed',
+      'text',
+      'link',
     ];
-    const { getByText } = render(
-      <>
-        {types.map((type, key) => (
-          <Button key={key} type={type}>
-            {type}
-          </Button>
-        ))}
-      </>,
-    );
-    types.forEach((t) => {
-      expect(getByText(t)).toMatchSnapshot();
+    const { container } = render(<ButtonType />);
+    container.querySelectorAll('.ar-button').forEach((ele, index) => {
+      expect(ele).toHaveClass(`ar-button--${types[index]}`);
     });
   });
 
   test('should render button with shape', () => {
-    const { getByText } = render(
-      <>
-        <Button shape="circle">circle</Button>
-        <Button shape="round">round</Button>
-      </>,
-    );
-    expect(getByText('circle')).toMatchSnapshot();
-    expect(getByText('round')).toMatchSnapshot();
+    const shapes = ['circle', 'round'];
+    const { container } = render(<ButtonShape />);
+    container.querySelectorAll('.ar-button').forEach((ele, index) => {
+      expect(ele).toHaveClass(`ar-button--${shapes[index]}`);
+    });
   });
 
   test('should render button with size', () => {
-    const { getByText } = render(
-      <>
-        <Button size="large">large</Button>
-        <Button size="middle">middle</Button>
-        <Button size="small">small</Button>
-      </>,
-    );
-    expect(getByText('large')).toMatchSnapshot();
-    expect(getByText('middle')).toMatchSnapshot();
-    expect(getByText('small')).toMatchSnapshot();
+    const sizes: Array<TSize> = ['small', 'middle', 'large'];
+    const { container } = render(<ButtonSize />);
+    container.querySelectorAll('.ar-button').forEach((ele, index) => {
+      expect(ele).toHaveClass(`ar-button--${sizes[index]}`);
+    });
   });
 
   test('should render button with status', () => {
-    const { getByText } = render(
-      <>
-        <Button status="success">success</Button>
-        <Button status="warning">warning</Button>
-        <Button status="error">error</Button>
-        <Button status="info">info</Button>
-      </>,
-    );
-    expect(getByText('success')).toMatchSnapshot();
-    expect(getByText('warning')).toMatchSnapshot();
-    expect(getByText('error')).toMatchSnapshot();
-    expect(getByText('info')).toMatchSnapshot();
+    const statuses: Array<TStatus> = ['info', 'success', 'warning', 'error'];
+    const { container } = render(<ButtonStatus />);
+    container.querySelectorAll('.ar-button').forEach((ele, index) => {
+      expect(ele).toHaveClass(`ar-button--${statuses[index]}`);
+    });
   });
 
   test('should render button with loading', () => {
