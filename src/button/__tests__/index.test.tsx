@@ -1,4 +1,5 @@
 import { Button } from '@arvin/react-ui';
+import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import React from 'react';
 import { TSize, TStatus, TType } from '../../config';
