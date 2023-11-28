@@ -2,8 +2,6 @@
 category: Components
 title: Button
 subtitle: 按钮
-cover: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*BrFMQ5s7AAQAAAAAAAAAAAAADrJ8AQ/original
-coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Lp1kTYmSsgoAAAAAAAAAAAAADrJ8AQ/original
 demo:
   cols: 2
 group:
@@ -18,6 +16,7 @@ group:
 <code src="./demo/examples/shape.tsx">按钮形状</code>
 <code src="./demo/examples/status.tsx">按钮状态</code>
 <code src="./demo/examples/disabled.tsx">禁用状态</code>
+<code src="./demo/examples/ghost.tsx">幽灵按钮</code>
 
 ## API
 

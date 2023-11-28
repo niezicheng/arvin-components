@@ -23,13 +23,11 @@
   }
 }
 
-@mixin buttonType($type, $color: $color-text, $borderColor: $color-outlined , $bgColor: $white, $zIndex: 0) {
+@mixin buttonType($type, $color: $color-text, $borderColor: $color-outlined , $bgColor: $white) {
   .#{$prefix}-button--#{$type} {
-    position: relative;
     color: $color;
     border-color: $borderColor;
     background-color: $bgColor;
-    z-index: $zIndex;
     @if $type == 'dashed' {
       border-style: dashed;
     }
@@ -81,25 +79,6 @@
   }
 }
 
-@mixin buttonGhost($ghost, $type, $text-color: $white, $border-color: $white) {
-  .#{$prefix}-button--#{$ghost}.#{$prefix}-button--#{$type} {
-    color: $text-color;
-    border-color: $border-color;
-    background-color: transparent;
-
-    &:hover {
-      color: $color-primary-hover;
-      border-color: $color-primary-hover;
-      background-color: transparent;
-    }
-    &:active {
-      color: $color-primary-active;
-      border-color: $color-primary-active;
-      background-color: transparent;
-    }
-  }
-}
-
 // Size / [round shape]
 @include buttonSize(small, 24px, 12px, 8px, round);
 @include buttonSize(middle, 32px, 14px, 16px, round);
@@ -111,20 +90,20 @@
 @include buttonType('default:active', $color-primary-active, $color-primary-active);
 
 @include buttonType(primary, $white, $color-primary, $color-primary);
-@include buttonType('primary:hover', $white, $color-primary-hover, $color-primary-hover, 1);
-@include buttonType('primary:active', $white, $color-primary-active, $color-primary-active, 1);
+@include buttonType('primary:hover', $white, $color-primary-hover, $color-primary-hover);
+@include buttonType('primary:active', $white, $color-primary-active, $color-primary-active);
 
 @include buttonType(dashed);
-@include buttonType('dashed:hover', $color-primary-hover, $color-primary-hover, 1);
-@include buttonType('dashed:active', $color-primary-active, $color-primary-active, 1);
+@include buttonType('dashed:hover', $color-primary-hover, $color-primary-hover);
+@include buttonType('dashed:active', $color-primary-active, $color-primary-active);
 
 @include buttonType(link, $color-primary, transparent, transparent);
-@include buttonType('link:hover', $color-primary-hover, transparent, transparent, 1);
-@include buttonType('link:active', $color-primary-active, transparent, transparent, 1);
+@include buttonType('link:hover', $color-primary-hover, transparent, transparent);
+@include buttonType('link:active', $color-primary-active, transparent, transparent);
 
 @include buttonType(text, $color-text, transparent, transparent);
-@include buttonType('text:hover', $color-text, transparent, transparent, 1);
-@include buttonType('text:active', $color-text, transparent, transparent, 1);
+@include buttonType('text:hover', $color-text, transparent, transparent);
+@include buttonType('text:active', $color-text, transparent, transparent);
 
 // Shape
 @include buttonShape(circle);
@@ -135,12 +114,5 @@
 @include buttonStatus(warning, $color-warning, $color-warning-hover, $color-warning-active);
 @include buttonStatus(error, $color-error, $color-error-hover, $color-error-active);
 
-// Disabled
+// Status
 @include buttonDisabled(disabled, $color-text-disabled);
-
-// Ghost
-@include buttonGhost(ghost, default);
-@include buttonGhost(ghost, primary, $color-primary, $color-primary);
-@include buttonGhost(ghost, dashed);
-
-

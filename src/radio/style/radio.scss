@@ -1,0 +1,36 @@
+@import '../../styles/tokens/index';
+
+.#{$prefix}-radio {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
+  cursor: pointer;
+
+  input[type='radio'] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  label {
+    padding: 0 8px
+  }
+}
+
+@mixin buttonDisabled($disabled, $color) {
+  .#{$prefix}-radio--#{$disabled} {
+    color: $color;
+
+    &:hover {
+      color: $color;
+      cursor: not-allowed;
+    }
+    &:active {
+      color: $color;
+    }
+  }
+}
+
+// Disabled
+@include buttonDisabled(disabled, $color-text-disabled);

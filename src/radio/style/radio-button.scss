@@ -1,0 +1,73 @@
+@import '../../styles/tokens/index';
+
+.#{$prefix}-radio-button {
+  margin-right: 0;
+  border-radius: 0;
+  position: relative;
+
+  &:hover + .#{$prefix}-radio-button {
+    border-left-color: $color-primary;
+  }
+
+  &:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+  }
+}
+
+@mixin buttonChecked($checked) {
+  .#{$prefix}-radio-button--#{$checked} {
+    &:not(:last-child) + .#{$prefix}-radio-button {
+      border-left-color: $color-primary;
+    }
+  }
+}
+
+@mixin buttonDisabled($disabled, $checked, $color) {
+  .#{$prefix}-radio-button--#{$disabled} {
+    &:hover {
+      color: $color;
+      cursor: not-allowed;
+    }
+    &:hover + .#{$prefix}-radio-button:not(.#{$prefix}-radio-button--#{$checked}) {
+      border-left-color: $color;
+    }
+
+    &:active {
+      color: $color;
+    }
+
+    &.#{$prefix}-radio-button--#{$checked} {
+      background-color: $color;
+      color: $color;
+      border-color: $color;
+
+      & + .#{$prefix}-radio-button {
+        border-left-color: $color;
+      }
+
+      &:hover {
+        color: $color;
+        background-color: $color;
+        border-color: $color;
+      }
+    }
+  }
+}
+
+// Checked
+@include buttonChecked(checked);
+
+// Disabled
+@include buttonDisabled(disabled, checked, $color-text-disabled);
+
+

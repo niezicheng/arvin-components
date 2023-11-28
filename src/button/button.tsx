@@ -13,6 +13,7 @@ const Button = (props: IButtonProps) => {
     status = '',
     loading = true,
     disabled = false,
+    ghost = false,
     children = null,
     style = {},
     className = '',
@@ -23,6 +24,7 @@ const Button = (props: IButtonProps) => {
     bem([type, shape, status, size], {
       loading: loading,
       disabled,
+      ghost,
     }),
     className,
   );
