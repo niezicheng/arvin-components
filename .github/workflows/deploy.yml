@@ -32,26 +32,22 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: '16'
+          cache: "pnpm"
 
-      # 如果你的依赖是使用 npm 的，用这种
-      # 缓存 npm node_modules
+      # 如果你的依赖是使用 pnpm 的，用这种
+      # 缓存 pnpm node_modules
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: pnpm/action-setup@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-cache-
+          version: ^7.0
 
-      # 安装依赖 npm
+      # 安装依赖 pnpm
       - name: Install dependencies
-        # 如果没有命中缓存才执行 npm install
-        if: steps.cache-deps.outputs.cache-hit != 'true'
-        run: npm install
+        run: pnpm install
 
       # 运行构建脚本
       - name: Run Build Script
-        run: npm run docs:build
+        run: pnpm run docs:build
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
