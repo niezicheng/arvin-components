@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_arvin_react_ui=self.webpackChunk_arvin_react_ui||[]).push([[448],{81101:function(v,n,e){e.r(n),e.d(n,{default:function(){return o}});var a=e(94475),t=e(50959),u=function(){var d=(0,a.UO)(),m=d.id,s=(0,a.WF)(),c=s.demos,i=c[m]||{},r=i.component;return r&&(0,t.createElement)(r)},o=u}}]);
