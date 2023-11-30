@@ -8,6 +8,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/niezicheng/arvin-components",
   "scripts": {
     "build": "father build",
     "build:watch": "father dev",

@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/@arvin/react-ui.svg?style=flat)](https://npmjs.org/package/@arvin/react-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/@arvin/react-ui.svg?style=flat)](https://npmjs.org/package/@arvin/react-ui)
 
-A react library developed with dumi
+A react components library and [document](https://niezicheng.github.io/arvin-components) developed with dumi.
 
 ## Usage
 

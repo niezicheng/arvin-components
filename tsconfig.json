@@ -11,7 +11,8 @@
       "@@/*": [".dumi/tmp/*"],
       "@arvin/react-ui": ["src"],
       "@arvin/react-ui/*": ["src/*", "*"]
-    }
+    },
+    "resolveJsonModule": true,
   },
   "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "jest.setup.ts"],
   "exclude": ["src/**/__tests__"]
