@@ -21,7 +21,8 @@ const Space: React.FC<ISpacesProps> = ({
   direction = 'horizontal',
   align = 'start',
   wrap = false,
-  block = false,
+  // block = false,
+  split,
   children,
   className,
   style,
@@ -60,7 +61,8 @@ const Space: React.FC<ISpacesProps> = ({
 
   const _style: React.CSSProperties = {
     ...style,
-    display: block ? 'flex' : 'inline-flex',
+    // display: block ? 'flex' : 'inline-flex',
+    display: 'flex',
     flexWrap: wrap ? 'wrap' : 'nowrap',
     flexDirection: direction === 'horizontal' ? 'row' : 'column',
     alignItems: getAlign(align),
@@ -69,7 +71,14 @@ const Space: React.FC<ISpacesProps> = ({
 
   return (
     <div className={className} style={_style}>
-      {children}
+      {React.Children.map(children, (child, index) => {
+        return (
+          <>
+            {child}
+            {index !== (children as any).length - 1 && split}
+          </>
+        );
+      })}
     </div>
   );
 };

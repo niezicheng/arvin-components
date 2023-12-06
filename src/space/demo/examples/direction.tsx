@@ -1,36 +1,28 @@
 /**
- * title: 按钮类型
- * description: 按钮有五种类型：主按钮、次按钮、虚线按钮、文本按钮和链接按钮。主按钮在同一个操作区域最多出现一次。
+ * title: 间距方向
+ * description: 按钮有两种类型：水平间距、垂直间距。默认为水平间距，可以通过 `direction` 属性设置为垂直间距。
  */
-import { Button, Space } from '@arvin/react-ui';
+import { Button, Radio, Space } from '@arvin/react-ui';
 import React from 'react';
 
+type TDirection = 'horizontal' | 'vertical';
+
 export default () => {
-  const directionArr = ['horizontal', 'vertical'];
-  const [direction, setDirection] = React.useState<'horizontal' | 'vertical'>(
-    'horizontal',
-  );
+  const [direction, setDirection] = React.useState<TDirection>('horizontal');
 
   return (
-    <Space direction="vertical">
-      <Space block size="large">
-        {directionArr.map((value) => (
-          <div key={value} style={{ display: 'flex', alignItems: 'center' }}>
-            <input
-              type="radio"
-              name="direction"
-              value={value}
-              checked={direction === value}
-              onChange={(e) =>
-                setDirection(e.target.value as 'horizontal' | 'vertical')
-              }
-              style={{ margin: 0, marginRight: 4 }}
-            />
-            <span>{value === 'horizontal' ? '水平' : '垂直'}</span>
-          </div>
+    <Space direction="vertical" size={24}>
+      <Radio.Group
+        value={direction}
+        onChange={(val) => setDirection(val as TDirection)}
+      >
+        {['horizontal', 'vertical'].map((size) => (
+          <Radio key={size} value={size}>
+            {size}
+          </Radio>
         ))}
-      </Space>
-      <Space block direction={direction}>
+      </Radio.Group>
+      <Space direction={direction}>
         <Button type="primary">Primary</Button>
         <Button type="default">Default</Button>
         <Button type="dashed">Dashed</Button>

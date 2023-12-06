@@ -1,24 +1,28 @@
 /**
- * title: 按钮尺寸
- * description: 按钮有大、中、小三种尺寸。通过设置 `size` 为 `large` `small` 分别把按钮设为大、小尺寸。若不设置 `size`，则尺寸为中。
+ * title: 间距大小
+ * description: 使用 size 设置元素之间的间距，预设了 `small`、`middle`、`large` 三种尺寸，也可以自定义间距，若不设置 `size`，则默认为 `middle`
  */
-import { Button, Space } from '@arvin/react-ui';
-import React from 'react';
+import { Button, Radio, Space } from '@arvin/react-ui';
+import React, { useState } from 'react';
 
 export default () => {
+  const [size, setSize] = useState<any>('middle');
+
   return (
-    <>
-      <input type="radio"></input>
-      <Space>
+    <Space direction="vertical" size={24}>
+      <Radio.Group value={size} onChange={(val) => setSize(val)}>
+        {['small', 'middle', 'large'].map((size) => (
+          <Radio key={size} value={size}>
+            {size}
+          </Radio>
+        ))}
+      </Radio.Group>
+      <Space size={size}>
         <Button type="primary">Primary</Button>
-        <Button type="default">Default</Button>
+        <Button>Default</Button>
         <Button type="dashed">Dashed</Button>
+        <Button type="link">Link</Button>
       </Space>
-      <Space direction="vertical">
-        <Button type="primary">Primary</Button>
-        <Button type="default">Default</Button>
-        <Button type="dashed">Dashed</Button>
-      </Space>
-    </>
+    </Space>
   );
 };

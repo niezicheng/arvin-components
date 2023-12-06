@@ -25,7 +25,7 @@ export interface ISpacesProps extends ComponentBaseProps {
   /**
    * @description 设置拆分
    */
-  split?: React.ReactNode;
+  split?: string | React.ReactNode;
 
   /**
    * @description 是否自动换行，仅在 horizontal 时有效
@@ -33,9 +33,9 @@ export interface ISpacesProps extends ComponentBaseProps {
    */
   wrap?: boolean;
 
-  /**
-   * 将宽度调整为父元素宽度的选项
-   * @default false
-   */
-  block?: boolean;
+  // /**
+  //  * 将宽度调整为父元素宽度的选项
+  //  * @default false
+  //  */
+  // block?: boolean;
 }

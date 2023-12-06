@@ -1,5 +1,6 @@
-export { default as ButtonDisabled } from './examples/align';
-export { default as ButtonType } from './examples/direction';
-export { default as ButtonSize } from './examples/size';
-export { default as ButtonShape } from './examples/split';
-export { default as ButtonStatus } from './examples/wrap';
+export { default as SpaceAlign } from './examples/align';
+export { default as SpaceBlock } from './examples/block';
+export { default as SpaceDirection } from './examples/direction';
+export { default as SpaceSize } from './examples/size';
+export { default as SpaceSplit } from './examples/split';
+export { default as SpaceWrap } from './examples/wrap';
