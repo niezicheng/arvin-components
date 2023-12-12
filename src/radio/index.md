@@ -2,8 +2,8 @@
 category: Components
 title: Radio
 subtitle: 单选
-# demo:
-#   cols: 2
+demo:
+  cols: 2
 group:
   title: 数据录入
   order: 4
